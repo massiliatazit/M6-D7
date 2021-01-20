@@ -18,7 +18,7 @@ class Model {
   //GET BY ID METHOD
   async findById(id) {
     if (!id) {
-      throw new Error("You did not include an id, you nincompoop");
+      throw new Error("You did not include an id go back😉");
     }
     const query = `SELECT * FROM ${this.name} WHERE id=${parseInt(id)}`;
     const response = await this.run(query);
@@ -40,7 +40,7 @@ class Model {
 
   //POST METHOD
   async save(body) {
-    if (!body || Object.values(search).length === 0) {
+    if (!body || Object.values(body).length === 0) {
       throw new Error("Body not included");
     }
     const entries = Object.entries(body);

@@ -4,7 +4,7 @@ const Articles = new Model("articles")
 const articleroute = express.Router()
 articleroute.get("/",async(req,res)=>{
     try {
-        const response = await Articles.findOne();
+        const response = await Articles.findOne(req.body);
         res.send(response)
         
     } catch (error) {
