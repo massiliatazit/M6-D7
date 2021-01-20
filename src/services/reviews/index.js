@@ -49,7 +49,7 @@ router.delete("/:id", async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    const allReviews = await Categories.findOne(req.query);
+    const allReviews = await Reviews.findOne(req.query);
     res.send(allReviews);
   } catch (error) {
     console.log(error);
